@@ -22,7 +22,7 @@
                 @Html.DisplayNameFor(model => model.Movies[0].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Movies[0].ReleaseDate)
+                @Html.ActionLink(@Html.DisplayNameFor(model => model.Movies[0].ReleaseDate), "Index", new { sortOrder = "ReleaseDate" })
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Movies[0].Genre)

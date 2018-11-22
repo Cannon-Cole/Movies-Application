@@ -20,7 +20,7 @@ namespace MvcMovie.Controllers
 
         // GET: Movies
         // Requires using Microsoft.AspNetCore.Mvc.Rendering;
-        public async Task<IActionResult> Index(string movieGenre, string searchString)
+        public async Task<IActionResult> Index(string movieGenre, string searchString, string sortOrder)
         {
             // Use LINQ to get list of genres.
             IQueryable<string> genreQuery = from m in _context.Movie
@@ -38,6 +38,13 @@ namespace MvcMovie.Controllers
             if (!String.IsNullOrEmpty(movieGenre))
             {
                 movies = movies.Where(x => x.Genre == movieGenre);
+            }
+
+            switch (sortOrder)
+            {
+                case "ReleaseDate":
+                    movies = movies.OrderByDescending(s => s.ReleaseDate);
+                    break;
             }
 
             var movieGenreVM = new MovieGenreViewModel();
