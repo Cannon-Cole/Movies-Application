@@ -1,6 +1,9 @@
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification 
 for details on configuring this project to bundle and minify static web assets. */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700');
+
 body {
+    font-family: 'Montserrat', sans-serif;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -8,8 +11,20 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
+    font-family: 'Montserrat', sans-serif;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+#mainLink {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.navbar-inverse {
+    background: #2C4770;
+    border-color: black;
+    color: black;
 }
 
 /* Carousel */
@@ -28,6 +43,67 @@ body {
     margin: 15px;
 }
 
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+
+input[type="date"] {
+    min-height: 46px;
+}
+
+.link-button {
+    color: black;
+    padding: 75px 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #2C4770;
+    border-radius: 6px;
+    margin-top: 1em;
+    font-size: 2rem;
+    transition: .2s;
+}
+
+    .link-button:hover {
+        text-decoration: none;
+        background: white;
+        color: black;
+    }
+
+.link-button-small {
+    color: black;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #2C4770;
+    border-radius: 6px;
+    margin-top: 1em;
+    font-size: 2rem;
+    transition: .2s;
+}
+
+    .link-button-small:hover {
+        text-decoration: none;
+        background: white;
+        color: black;
+    }
+
+.center-button {
+    display:flex;
+    justify-content:center;
+}
+
+a, a:link, a:visited {
+    color: #4C668C;
+}
+
+    a:hover, a:focus, a:active {
+        color: #758AA8;
+    }
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
     /* Hide captions */
@@ -35,3 +111,28 @@ body {
         display: none;
     }
 }
+
+.table td, .table th {
+    padding: 8px;
+}
+
+    .table tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .table tr:hover {
+        background-color: #A0BBE2;
+    }
+
+input[type=submit] {
+    border: 2px solid black;
+    color: white;
+    background: #2C4770;
+    transition: .2s;
+}
+
+    input[type=submit]:hover {
+        border: 2px solid black;
+        color: black;
+        background: white;
+    }
