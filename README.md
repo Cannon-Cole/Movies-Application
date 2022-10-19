@@ -1,2 +1,2 @@
 <h1>What is this?</h1>
-Movies websites built using .NET in Visual Studio
+View and sort movie data such as name, release, date, and genre. Built in C# & .NET.
